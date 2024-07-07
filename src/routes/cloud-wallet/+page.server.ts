@@ -1,4 +1,4 @@
-import NeucronSDK from "neucron-sdk";
+/// import NeucronSDK from "neucron-sdk";
 
 /** @type {import('./$types').Actions} */
 export const actions = {
@@ -6,24 +6,24 @@ export const actions = {
     login: async ({request}) => {
 		const data = await request.formData();
 
-        const neucron = new NeucronSDK();
+        /// const neucron = new NeucronSDK();
 
-        const authModule = neucron.authentication;
-        const walletModule = neucron.wallet;
+        /// const authModule = neucron.authentication;
+        /// const walletModule = neucron.wallet;
         
         // const signUpResponse = await authModule.signUp({ email: "sales@timechainlabs.io", password: "string" });
         // console.log(signUpResponse);
         
-        const loginResponse = await authModule.login({ email: data.get('email'), password: data.get('password') });
-        console.log(loginResponse);
+        /// const loginResponse = await authModule.login({ email: data.get('email'), password: data.get('password') });
+        /// console.log(loginResponse);
         
         // const walletKeys = await walletModule.getWalletKeys({});
         // console.log(walletKeys);
         
         
         // For Default wallet balance
-        const DefaultWalletBalance = await walletModule.getWalletBalance({});
-        console.log(DefaultWalletBalance);
+        /// const DefaultWalletBalance = await walletModule.getWalletBalance({});
+        /// console.log(DefaultWalletBalance);
         
         // const addresses = await walletModule.getAddressesByWalletId({});
         // console.log(addresses);
@@ -50,19 +50,20 @@ export const actions = {
         // const xPubKeys = await walletModule.getXPubKeys({ walletId: walletCreation1.walletID });
         // console.log(xPubKeys);        
 
-    return { success: true , balance: DefaultWalletBalance.data.balance.summary};
+    return { success: true , balance: "NONE"};
 	} ,
+  /// balance: DefaultWalletBalance.data.balance.summary
 
     pay: async ({request}) => {
 		const data = await request.formData();
 
-        const neucron = new NeucronSDK();
+        /// const neucron = new NeucronSDK();
 
-        const authModule = neucron.authentication;
-        const walletModule = neucron.wallet;
+        /// const authModule = neucron.authentication;
+        /// const walletModule = neucron.wallet;
 
-        const loginResponse = await authModule.login({ email: data.get('email'), password: data.get('password') });
-        console.log(loginResponse);
+        /// const loginResponse = await authModule.login({ email: data.get('email'), password: data.get('password') });
+        /// console.log(loginResponse);
 
         const options = {
             outputs: [
@@ -74,10 +75,11 @@ export const actions = {
             ]
           };
         console.log(options);
-        const payResponse = await neucron.pay.txSpend(options)
-        console.log(payResponse)
+        /// const payResponse = await neucron.pay.txSpend(options)
+        /// console.log(payResponse)
         
-        return { success: true , payment: payResponse};
+        /// return { success: true , payment: payResponse};
+        return { success: true , payment: "payResponse"};
 
     }
         
