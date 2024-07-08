@@ -55,7 +55,7 @@
 </div>
 
 <div
-    class="mt-10 pt-10 w-full max-w-xl p-12 mx-auto rounded-lg shadow-xl dark:bg-white/10 bg-white/30 ring-1 ring-gray-900/5 backdrop-blur-lg"
+    class="mt-2 mb-10 pt-10 w-full max-w-xl p-12 mx-auto rounded-lg shadow-xl dark:bg-white/10 bg-white/30 ring-1 ring-gray-900/5 backdrop-blur-lg"
 >
     <form method="POST" action="?/pay">
         <div class="flex flex-wrap mb-2">
@@ -134,6 +134,6 @@
     {#if form?.success}
         <!-- this message is ephemeral; it exists because the page was rendered in
 		   response to a form submission. it will vanish if the user reloads -->
-        <p class="pt-2">The payment was successful, Here is your <a href="{form?.payment}">transaction</a>! </p>
+        <p class="pt-2">The payment was successful, Here is your <a class="text-indigo-500 font-semibold underline" href={`https://whatsonchain.com/tx/${form?.payment}`} >transaction</a>! </p>
     {/if}
 </div>
