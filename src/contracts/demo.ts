@@ -1,5 +1,5 @@
+import type {ByteString} from 'scrypt-ts'
 import {
-    ByteString,
     Sha256,
     sha256,
     SmartContract,

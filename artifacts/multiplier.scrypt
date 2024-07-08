@@ -1,0 +1,12 @@
+
+contract Multiplier {
+  int factor1;
+  int factor2;
+  constructor(int n1, int n2) {
+    this.factor1 = n1;
+    this.factor2 = n2;
+  }
+  public function unlock(int multiplier) {
+    require(multiplier == this.factor1 * this.factor2);
+  }
+}

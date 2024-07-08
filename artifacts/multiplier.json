@@ -1,0 +1,40 @@
+{
+    "version": 9,
+    "compilerVersion": "1.19.2+commit.c3a20a0",
+    "contract": "Multiplier",
+    "md5": "c49b78822c808d9a75314ca1b5479925",
+    "structs": [],
+    "library": [],
+    "alias": [],
+    "abi": [
+        {
+            "type": "function",
+            "name": "unlock",
+            "index": 0,
+            "params": [
+                {
+                    "name": "multiplier",
+                    "type": "int"
+                }
+            ]
+        },
+        {
+            "type": "constructor",
+            "params": [
+                {
+                    "name": "n1",
+                    "type": "int"
+                },
+                {
+                    "name": "n2",
+                    "type": "int"
+                }
+            ]
+        }
+    ],
+    "stateProps": [],
+    "buildType": "debug",
+    "file": "file:///C:/Users/dell/Documents/TSOC%202024/sveltekit-fullstack-demo/artifacts/multiplier.scrypt",
+    "hex": "0000<n1><n2>615179547a75537a537a537a0079537a75527a527a757561527952795279959c777777",
+    "sourceMapFile": ""
+}
