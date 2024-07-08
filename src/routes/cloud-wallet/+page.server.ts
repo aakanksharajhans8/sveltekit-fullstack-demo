@@ -69,7 +69,7 @@ export const actions = {
               {
                 address: data.get('paymail'),
                 note: 'gurudakshina',
-                amount: data.get('amount')
+                amount: Number(data.get('amount'))
               }
             ]
           };
@@ -77,7 +77,7 @@ export const actions = {
          const payResponse = await neucron.pay.txSpend(options)
          console.log(payResponse)
         
-         return { success: true , payment: payResponse};
+         return { success: true , payment: payResponse.data.txid};
 
     }
         
