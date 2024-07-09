@@ -56,7 +56,6 @@
         target="_blank">Transaction Link!</a
       >
     </p> </div> 
-    {:else if !form?.deployed} <p>ERROR </p>
   {/if}
 </div>
 
@@ -97,6 +96,5 @@
         target="_blank">Transaction Link!</a
       >
     </p> </div>
-    {:else if !form?.success} <p>ERROR </p>
   {/if}
 </div>
