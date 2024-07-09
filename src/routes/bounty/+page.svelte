@@ -48,14 +48,16 @@
   </form>
 
   {#if form?.deployed}
-    <p class="pt-2 text-center text-green-500">
+  <div class="border border-red-500"> 
+  <p class="pt-2 text-center text-green-500">
       Bounty was deployed successfully: <a
         href={"https://whatsonchain.com/tx/" + form?.txid}
         class="text-blue-500 underline"
         target="_blank"
         rel="noopener noreferrer">Transaction Link!</a
       >
-    </p>
+    </p> </div> 
+    {:else} <p>ERROR </p>
   {/if}
 </div>
 
@@ -88,13 +90,14 @@
     </div>
   </form>
   {#if form?.success}
-    <p class="pt-2 text-center text-green-500">
+  <div class="border border-red-500">   
+  <p class="pt-2 text-center text-green-500">
       Bounty was unlocked successfully: <a
         href={"https://whatsonchain.com/tx/" + form?.txid}
         class="text-blue-500 underline"
         target="_blank"
         rel="noopener noreferrer">Transaction Link!</a
       >
-    </p>
+    </p> </div>
   {/if}
 </div>
