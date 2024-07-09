@@ -1,11 +1,12 @@
 <script>
+  import {enhance} from '$app/forms'
   export let form;
 </script>
 
 <div
   class="mt-10 pt-10 w-full max-w-xl p-12 mx-auto rounded-lg shadow-xl dark:bg-white/10 bg-white/30 ring-1 ring-gray-900/5 backdrop-blur-lg"
 >
-  <form method="POST" action="?/deploy">
+  <form method="POST" use:enhance action="?/deploy">
     <div class="flex flex-wrap -mx-3 mb-2">
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <label
@@ -61,7 +62,7 @@
 <div
   class="mt-10 pt-10 w-full max-w-xl p-12 mx-auto rounded-lg shadow-xl dark:bg-white/10 bg-white/30 ring-1 ring-gray-900/5 backdrop-blur-lg"
 >
-  <form method="POST" action="?/unlock">
+  <form method="POST" use:enhance action="?/unlock">
     <div class="flex flex-wrap -mx-3 mb-2">
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <label
