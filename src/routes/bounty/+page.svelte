@@ -53,11 +53,10 @@
       Bounty was deployed successfully: <a
         href={"https://whatsonchain.com/tx/" + form?.txid}
         class="text-blue-500 underline"
-        target="_blank"
-        rel="noopener noreferrer">Transaction Link!</a
+        target="_blank">Transaction Link!</a
       >
     </p> </div> 
-    {:else} <p>ERROR </p>
+    {:else if !form?.deployed} <p>ERROR </p>
   {/if}
 </div>
 
@@ -95,9 +94,9 @@
       Bounty was unlocked successfully: <a
         href={"https://whatsonchain.com/tx/" + form?.txid}
         class="text-blue-500 underline"
-        target="_blank"
-        rel="noopener noreferrer">Transaction Link!</a
+        target="_blank">Transaction Link!</a
       >
     </p> </div>
+    {:else if !form?.success} <p>ERROR </p>
   {/if}
 </div>
